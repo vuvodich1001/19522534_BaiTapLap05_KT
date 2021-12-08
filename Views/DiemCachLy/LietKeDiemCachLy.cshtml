@@ -1,0 +1,14 @@
+﻿@model List<BaiTapLab05_19522534.Models.DiemCachLyModel>
+
+<form action="/DiemCachLy/ListCongNhanTheoDiemCachLy" method="post">
+    <label>Tên điểm cách li</label>
+    <select name="maDiemCachLy">
+        @foreach(var item in Model)
+            {
+                <option value="@item.MaDiemCachLy">
+                    @item.TenDiemCachLy
+                </option>
+            }
+    </select> <br />
+    <input type="submit" name="submit"/>
+</form>

@@ -1,0 +1,14 @@
+﻿@model BaiTapLab05_19522534.Models.CongNhanModel
+
+<form>
+    <label>Mã công nhân</label>
+    <input type="text" value="@Model.MaCongNhan" /> <br />
+    <label>Tên công nhân</label>
+    <input type="text" value="@Model.TenCongNhan" /> <br />
+    <label>Giới tính</label>
+    <input type="checkbox" @if (Model.GioiTinh.Equals("Nam")) { @Html.Raw("checked")} /> <br />
+    <label>Năm sinh</label>
+    <input type="text" value="@Model.NamSinh" /> <br />
+    <label>Nước về</label>
+    <input type="text" value="@Model.NuocVe" /> <br />
+</form>

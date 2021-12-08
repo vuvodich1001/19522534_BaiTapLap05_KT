@@ -1,0 +1,20 @@
+﻿@model List<BaiTapLab05_19522534.Models.CongNhanModel>
+
+<table border="1">
+    <tr>
+        <th>Mã công nhân</th>
+        <th>Tên công nhân</th>
+        <th>Chức năng</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.MaCongNhan</td>
+            <td>@item.TenCongNhan</td>
+            <td>
+                <a href="/DiemCachLy/XoaCongNhan/@item.MaCongNhan">Delete</a>
+                <a href="/DiemCachLy/ChiTietCongNhan/@item.MaCongNhan">View</a>
+            </td>
+        </tr>
+    }
+</table>
